@@ -1,9 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    long long int a;
-    long long int b;
-    long long int c;
+    long long int a, b, c;
     scanf("%lld %lld %lld", &a, &b, &c);
 
     long long orig_a = a, orig_b = b, orig_c = c;
@@ -22,21 +20,50 @@ int main()
        c = temp;
 
     }
-      if (a > b)
+      if (a > c)
     {
        long long int temp = a;
        a = b;
        b = temp;
 
     }
-    printf("%lld\n", a);
-    printf("%lld\n", b);
-    printf("%lld\n", c);
+    printf("%lld\n %lld\n %lld\n", a, b, c);
 
     printf("\n");
 
-    printf("%lld\n", orig_a);
-    printf("%lld\n", orig_b);
-    printf("%lld\n", orig_c);
+    printf("%lld\n %lld\n %lld\n", orig_a, orig_b, orig_c );
     return 0;
 }
+
+
+/*
+Given three numbers A, B, C. Print these numbers in ascending order followed by a blank line and then the values in the sequence as they were read.
+
+Input
+Only one line containing three numbers A, B, C ( - 106  ≤  A, B, C  ≤  106)
+
+Output
+Print the values in ascending order followed by a blank line and then the values in the sequence as they were read.
+
+Examples
+InputCopy
+3 -2 1
+OutputCopy
+-2
+1
+3
+
+3
+-2
+1
+InputCopy
+-2 10 0
+OutputCopy
+-2
+0
+10
+
+-2
+10
+0
+*/
